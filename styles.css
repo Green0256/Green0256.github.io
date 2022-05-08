@@ -1,0 +1,172 @@
+a {
+    text-decoration: none;
+  }
+
+div {
+    display: inline-block; 
+    _display: inline;
+}
+
+ul {
+    list-style-type: square;
+}
+
+.button01 a{
+    width: 230px;
+    padding:15px;
+    color:#ffffff;
+    font-size: 15px;
+    line-height: 120%;
+    text-align: center;
+    text-decoration: none;
+    -webkit-border-radius:8px;
+    -moz-border-radius:8px;
+    border-radius:8px;
+    background: #FF9C15;
+    display: block;
+    position:relative;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+  }
+
+.button01 a::before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    margin:-8px 0 0 0;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+    background: #fff;
+    position:relative;
+    position:absolute;
+    top:50%;
+    left:20px;
+    display:block;
+  }
+
+.button01 a::after{
+    content: '';
+    width: 4px;
+    height: 4px;
+    border: 0px;
+    margin:-3px 0 0 0;
+    border-top: solid 2px #FF9C15;
+    border-right: solid 2px #FF9C15;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position:absolute;
+    top:50%;
+    left:24px;
+    display:block;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+    transition: 0.3s ease-out;
+}
+  
+.button01 a:hover{
+    background: #FFAF42;
+  }
+  .button01
+ a:hover::after{
+    border-top: solid 2px #FFAF42;
+    border-right: solid 2px #FFAF42;
+}
+
+
+.box01 {
+    width: 232px;
+  }
+
+.box01 a{
+    border:1px solid #999999;
+    box-sizing: border-box;
+    color: #333333;
+    display:block;
+  }
+  
+.box01 a *{
+    transition: 0.2s opacity ease-in-out;
+    -o-transition: 0.2s opacity ease-in-out;
+    -moz-transition: 0.2s opacity ease-in-out;
+    -webkit-transition: 0.2s opacity ease-in-out;
+  }
+
+.box01 p {
+    font-size: 10px;
+    line-height: 1.6;
+    padding: 8px;
+  }
+
+.box01 .ttl {
+    font-size: 18px;
+    padding: 10px 10px 0;
+  }
+
+.box01 a:hover *{
+    opacity: 0.8;
+  }
+
+.new {
+    display        : inline-block;       /* インラインボックス定義  */
+    content        : "NEW";              /* 表示する文字            */
+    background     : #00007f;            /* 背景色                  */
+    color          : #ffffff;            /* 文字色                  */
+    font-weight    : bold;               /* 太字                    */
+    font-size      : 10pt;               /* ベースの文字サイズ      */
+    letter-spacing : -1px;               /* 文字間隔詰め            */
+    line-height    : 1;                  /* 1行の高さ               */
+    vertical-align : top;                /* 基準の高さ位置          */
+    margin         : 0;                  /* 外余白なし              */
+    padding        : 2px;                /* 反転時の内余白          */
+    transform      : scale(0.6)          /* 文字サイズ変更          */
+                     translateX(-32%);    /* 横位置調整              */
+                                         /* ブリンクのアニメ指定    */
+    animation      : newAnime .7s infinite alternate;
+  }
+
+@keyframes newAnime {
+     0% { color      : #00007f;          /* ブリンク時の文字色      */
+          background : #ffffff;          /* ブリンク時の背景色      */
+        }
+   100% { color      : #ffffff;          /* ブリンク時の文字色      */
+          background : #00007f;          /* ブリンク時の背景色      */
+        }
+}
+
+.box02 {
+    text-align: start;
+    margin: 2em 0;
+    background: #f1f1f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+    padding: 15px 20px;
+}
+.box02 .box-title {
+    font-size: 1.5em;
+    background: #5fc2f5;
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    border-radius: 5px;
+}
+
+@media screen and (max-width:480px) {
+    img {
+      width: 100%;
+    }
+   
+    .box01 {
+      overflow: hidden;
+      width: 49%;
+      height: 25%;
+      color: #fff;
+      border-radius: 0;
+    }
+  }
